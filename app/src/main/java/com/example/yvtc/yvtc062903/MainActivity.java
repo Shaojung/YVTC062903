@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "This is button3", Toast.LENGTH_LONG).show();
+                Button btn = (Button) findViewById(R.id.button);
+                btn.setVisibility(View.GONE);
             }
         });
     }
@@ -34,5 +36,10 @@ public class MainActivity extends AppCompatActivity {
     public void click2(View v)
     {
         Log.d("CLI", "This is click2");
+        Button btn = (Button) findViewById(R.id.button);
+        if (btn.getVisibility() == View.VISIBLE)
+            btn.setVisibility(View.INVISIBLE);
+        else
+            btn.setVisibility(View.VISIBLE);
     }
 }
