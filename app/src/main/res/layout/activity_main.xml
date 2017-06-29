@@ -22,4 +22,12 @@
         android:onClick="click2"
         android:text="Button" />
 
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:textOff="電源關閉"
+        android:textOn="電源開啟" />
+
 </LinearLayout>

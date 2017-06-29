@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "This is button3", Toast.LENGTH_LONG).show();
                 Button btn = (Button) findViewById(R.id.button);
                 btn.setVisibility(View.GONE);
+            }
+        });
+
+        ToggleButton tb = (ToggleButton) findViewById(R.id.toggleButton);
+        tb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                Toast.makeText(MainActivity.this, "現在開關狀態是:" + isChecked, Toast.LENGTH_LONG).show();
             }
         });
     }
